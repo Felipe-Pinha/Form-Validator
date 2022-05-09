@@ -22,7 +22,7 @@ const validation = {
 for (const input of inputs) {
     input.addEventListener('focus', () => {
         if(input.classList.contains('error')) {
-            input.classList.remove('error');
+            input.classList.remove('error')
         }
     })
 }
@@ -31,8 +31,8 @@ for (const input of inputs) {
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    validation.inputsValidation();
-    validation.emailValidation();
+    validation.inputsValidation()
+    validation.emailValidation()
 
 })
 
