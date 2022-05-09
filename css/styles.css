@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Roboto&family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #231b38;
+    cursor: default;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.screen {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left-side h1 {
+    color: #19a0bf;
+    font-size: 3.3rem;
+    text-transform: uppercase;
+}
+
+.left-side img {
+    height: 400px;
+    width: auto;
+    
+}
+
+.rigth-side {
+    max-width: 50vw;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    max-width: 80%;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    background-color: #2d2542;
+    border-radius: 15px;
+}
+
+form h2 {
+    font-size: 2.5rem;
+    padding: 10px;
+    font-weight: 800;
+    color: #19a0bf;
+    text-transform: uppercase;
+}
+
+form .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 40px;
+    margin: 5px 0;
+}
+
+.input-container input {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #bbb;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.input-container label {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #19a0bf;
+    color: #2d2542;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.btn:hover {
+    background-color: #33a2bb;
+    transition: 500ms;
+}
+
+.error {
+    border: 3px solid #f00;
+    color: #f00;
+}
