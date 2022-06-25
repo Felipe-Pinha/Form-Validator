@@ -1,42 +1,57 @@
-const inputs = document.querySelectorAll('input')
-const submitBtn = document.querySelector('.btn')
+const form = document.querySelector('form')
+const name = document.querySelector('#name')
+const email = document.querySelector('#email')
+const password = document.querySelector('#password')
 
+const setSuccess = (input) => {
+    const inputContainer = input.parentNode
 
-const validation = {
-    inputsValidation: (input) => {
+    if(inputContainer.classList.contains('error')) {
+        inputContainer.classList.remove('error')
+    }
 
-        for(const input of inputs) {
-            if(input.value === ''.trim()) {
-                input.classList.add('error')
+    inputContainer.classList.add('success')
+}
 
-            }
-        }
-    },
-    emailValidation: () => {
-        if(!checkEmail(inputs[1].value)) {
-            inputs[1].classList.add('error')
-        }
+const setError = (input) => {
+    const inputContainer = input.parentNode
+
+    if(inputContainer.classList.contains('success')) {
+        inputContainer.classList.remove('success')
+    }
+    
+    inputContainer.classList.add('error')
+}
+
+const checkInputs = () => {
+    const nameValue = name.value
+    const emailValue = email.value
+    const passwordValue = password.value
+
+    if(nameValue === '') {
+        setError(name)
+    } else {
+        setSuccess(name)
+    }
+
+    if(emailValue === '') {
+        setError(email)
+    } else {
+        setSuccess(email)
+    }
+
+    if(passwordValue === '') {
+        setError(password)
+    } else {
+        setSuccess(password)
     }
 }
 
-for (const input of inputs) {
-    input.addEventListener('focus', () => {
-        if(input.classList.contains('error')) {
-            input.classList.remove('error');
-        }
-    })
-}
 
-
-submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    validation.inputsValidation();
-    validation.emailValidation();
-
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    checkInputs()
 })
-
-
 
 
 function checkEmail(email) {

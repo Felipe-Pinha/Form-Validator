@@ -10,6 +10,8 @@ body {
     background-color: #231b38;
     cursor: default;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
 }
 
 
@@ -72,6 +74,7 @@ form h2 {
 
 form .input-container {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -88,8 +91,7 @@ form .input-container {
 }
 
 .input-container label {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+    display: inline-block;
 }
 
 .btn {
@@ -112,7 +114,33 @@ form .input-container {
     transition: 500ms;
 }
 
-.error {
-    border: 3px solid #f00;
+
+.input-container i {
+    position: absolute;
+    right: 13%;
+    top: 52%;
+    visibility: hidden;
+}
+
+.input-container i.fa-check-circle {
+    color: #0f0;
+}
+.input-container i.fa-exclamation-circle {
     color: #f00;
+}
+
+.input-container.success input {
+    border-color: #0f0;
+}
+
+.input-container.error  input {
+    border-color:#f00;
+}
+
+.input-container.success i.fa-check-circle {
+    visibility: visible;
+}
+
+.input-container.error i.fa-exclamation-circle {
+    visibility: visible;
 }

@@ -17,20 +17,26 @@
             <img src="./images/image.svg" alt="">
         </div>
         <div class="right-side">
-            <form action="#" method="POST">
+            <form>
                 <h2>Cadastro</h2>
                 
                 <div class="input-container">
                     <label for="name">Nome</label>
-                    <input type="text" placeholder="digite seu nome">
+                    <input type="text" id="name" placeholder="digite seu nome">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
                 </div>
                 <div class="input-container">
                     <label for="email">Email</label>
-                    <input type="text" placeholder="digite seu email">
+                    <input type="text" id="email" placeholder="digite seu email">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
                 </div>
                 <div class="input-container">
-                    <label for="senha">Senha</label>
-                    <input type="password" placeholder="digite sua senha">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="digite sua senha">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
                 </div>
 
                 <button type="submit" class="btn">Cadastrar</button>
@@ -38,6 +44,7 @@
         </div>
     </div>
 
+    <script src="https://kit.fontawesome.com/523e6a491b.js" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
